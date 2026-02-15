@@ -8,8 +8,8 @@ namespace tryme
 {
     internal class Skull
     {
-        string _open = File.ReadAllText("open.txt");
-        string _closed = File.ReadAllText("closed.txt");
+        string _open = "          _______\r\n       .-\"       \"-.\r\n      /             \\\r\n     |               |\r\n     |,  .-.   .-.  ,|\r\n     | )(__/   \\__)( |\r\n     |/     /\\      \\|\r\n     (_     ^^     _)\r\n      \\__|IIIIII|__/\r\n       |   ----   |\r\n       \\          /\r\n        `--------`\r\n";
+        string _closed = "          _______\r\n       .-\"       \"-.\r\n      /             \\\r\n     |               |\r\n     |,  .-.   .-.  ,|\r\n     | )(__/   \\__)( |\r\n     |/     /\\      \\|\r\n     (_     ^^     _)\r\n      \\__|IIIIII|__/\r\n       |  \\____/  |\r\n       \\  /    \\  /\r\n        `--------`\r\n";
 
         public Skull(int delay,int loops)
         {

@@ -14,11 +14,17 @@ namespace tryme
         string _folderPath;
         bool _deleteFiles;
 
-        public Crypt(string folderPath, bool deleteFiles)
+        public Crypt(string folderPath, bool deleteFiles, bool showKey)
         {
             _folderPath = folderPath;
             _key = RandomString(64);
-            Console.WriteLine($"Generated key: {_key}");
+
+            if (showKey)
+                Console.WriteLine($"Generated key: {_key}");
+            else
+            {
+                File.WriteAllText(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "key.txt"), _key);
+            }
 
             _deleteFiles = deleteFiles;
         }

